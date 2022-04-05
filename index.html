@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | [Blogr]</title>
+  <script src="nav.js" defer></script>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="style.css">
@@ -17,29 +18,50 @@
     rel="stylesheet">
 </head>
 <body>
-  <!-- Product
-
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
-
-  Company
-
-  About
-  Team
-  Blog
-  Careers
-
-  Connect
-
-  Contact
-  Newsletter
-  LinkedIn
-  
-  Login
-  Sign Up -->
+  <nav aria-label="Primary navigation">
+    <div class="container nav-container">
+      <a href="/" aria-label="Go to homepage">
+        <img src="/images/logo.svg" alt="Logo">
+      </a>
+      <button class="btn--menu" aria-label="Open mobile nav" aria-expanded="false" aria-controls="menubar">
+      </button>
+      <ul role="menubar" class="nav-links--main" id="menubar">
+        <li role="none">
+          <a href="#" role="menuitem" class="nav-link--main">Product</a>
+          <ul class="nav-sublinks">
+            Overview
+            Pricing
+            Marketplace
+            Features
+            Integrations
+          </ul>
+        </li>
+        <li role="none">
+          <a href="#" role="menuitem" class="nav-link--main">Company</a>
+          <ul class="nav-sublinks">
+            About
+            Team
+            Blog
+            Careers
+          </ul>
+        </li>
+        <li role="none" class="right-me">
+          <a href="#" role="menuitem" class="nav-link--main">Connect</a>
+          <ul class="nav-sublinks">
+            Contact
+            Newsletter
+            LinkedIn
+          </ul>
+        </li>
+        <li role="none">
+          <a href="#" class="btn btn--outline" role="menuitem">Login</a>
+        </li>
+        <li role="none">
+          <a href="#" class="btn btn--filled" role="menuitem">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
   <header>
     <div class="grid-sm">
@@ -50,12 +72,13 @@
       <a href="#" class="btn btn--filled">Start for Free</a>
       <a href="#" class="btn btn--outline">Learn More</a>
     </div>
+    <img src="./images/bg-pattern-intro-desktop.svg" class="bkg" alt="Background image" aria-hidden="true">
   </header>
   <main>
   <section aria-labelledby="future-designed">
     <h2 id="future-designed" class="h3">Designed for the future</h2>
-    <div class="flex-reverse">
-      <div class="text-group">
+    <div class="flex-reverse container">
+      <div class="text-group flex-child">
         <div class="grid-sm">
           <h3 class="h3">Introducing an extensible editor</h3>
           <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
@@ -70,13 +93,17 @@
         </div>
       </div>
       <img src="./images/illustration-editor-mobile.svg" class="future--mobile-svg" alt="Laptop">
+
+      <img src="./images/illustration-editor-desktop.svg" class="future--desktop-svg flex-child" alt="Laptop">
     </div>
   </section>
   <section aria-labelledby="phones">
-    <div class="phones-bkg"></div>
-    <div class="flex-wrap">
-      <img src="./images/illustration-phones.svg" alt="Illustration Phones">
-      <div class="grid-sm">
+    <div class="phones-bkg">
+      <img src="./images/bg-pattern-circles.svg" class="bkg" alt="Circles" aria-hidden="true">
+    </div>
+    <div class="flex-wrap container">
+      <img class="flex-child phones" src="./images/illustration-phones.svg" alt="Illustration Phones">
+      <div class="flex-child grid-sm">
         <h2 id="phones" class="h2">State of the Art Infrastructure</h2>
         <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
       </div>
@@ -84,8 +111,9 @@
   </section>
   <section aria-labelledby="additional features">
     <h2 id="additional features" class="sr-only">Additional Features</h2>
-    <div class="flex-reverse">
-      <div class="text-group">
+    <div class="flex-reverse container">
+            <img src="./images/illustration-laptop-desktop.svg" class="feature--desktop-svg flex-child" alt="Laptop">
+      <div class="text-group flex-child">
         <div class="grid-sm">
           <h3 class="h3">Free, open, simple</h3>
           <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports
@@ -99,12 +127,12 @@
           </p>
         </div>
       </div>
-      <img src="./images/illustration-laptop-mobile.svg" class="future--mobile-svg" alt="Laptop">
+      <img src="./images/illustration-laptop-mobile.svg" class="feature--mobile-svg" alt="Laptop">
     </div>
   </section>
   </main>
   <footer>
-    <div class="footer-container footer-flex">
+    <div class="container footer-flex">
       <a href="/" class="footer-logo">
         <img src="./images/logo.svg" alt="Blogr Logo">
       </a>
